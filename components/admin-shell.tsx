@@ -73,7 +73,7 @@ export function AdminShell({ children }: AdminShellProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">
               <ScaleIcon className="h-6 w-6 text-primary" />
@@ -134,12 +134,12 @@ export function AdminShell({ children }: AdminShellProps) {
                   <ScaleIcon className="h-6 w-6 text-primary" />
                   <span className="text-xl font-bold">JurisConsult</span>
                 </div>
-                <nav className="flex flex-col gap-4">
+                <nav className="flex flex-col gap-2">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md ${
+                      className={`flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-md ${
                         pathname === item.href || pathname.startsWith(`${item.href}/`)
                           ? "bg-primary/10 text-primary"
                           : "text-muted-foreground hover:text-foreground hover:bg-muted"
@@ -159,12 +159,12 @@ export function AdminShell({ children }: AdminShellProps) {
 
       <div className="flex-1 flex">
         <aside className="hidden md:flex w-64 flex-col border-r bg-muted/40">
-          <nav className="flex-1 space-y-1 px-2 py-4">
+          <nav className="flex-1 space-y-1 px-3 py-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md ${
+                className={`flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-md ${
                   pathname === item.href || pathname.startsWith(`${item.href}/`)
                     ? "bg-primary/10 text-primary"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted"
@@ -177,8 +177,8 @@ export function AdminShell({ children }: AdminShellProps) {
           </nav>
         </aside>
 
-        <main className="flex-1 p-6">
-          <div className="mx-auto max-w-7xl space-y-6">{children}</div>
+        <main className="flex-1 p-6 md:p-8">
+          <div className="mx-auto max-w-7xl space-y-8">{children}</div>
         </main>
       </div>
     </div>

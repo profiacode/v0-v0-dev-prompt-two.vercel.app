@@ -50,8 +50,8 @@ export default function ForgotPasswordPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <div className="container flex flex-col items-center justify-center min-h-screen py-12">
-        <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+      <div className="container flex flex-col items-center justify-center min-h-screen py-12 px-4">
+        <div className="mx-auto flex w-full flex-col justify-center space-y-8 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
             <Link href="/" className="flex items-center justify-center gap-2 mb-8">
               <ScaleIcon className="h-6 w-6 text-primary" />
@@ -64,9 +64,9 @@ export default function ForgotPasswordPage() {
           </div>
 
           {isSubmitted ? (
-            <div className="bg-muted p-6 rounded-lg text-center">
-              <h2 className="font-medium mb-2">Email enviado!</h2>
-              <p className="text-sm text-muted-foreground mb-4">
+            <div className="bg-muted p-8 rounded-lg text-center">
+              <h2 className="font-medium mb-4">Email enviado!</h2>
+              <p className="text-sm text-muted-foreground mb-6">
                 Verifique sua caixa de entrada para instruções sobre como redefinir sua senha.
               </p>
               <Link href="/login">
@@ -75,7 +75,7 @@ export default function ForgotPasswordPage() {
             </div>
           ) : (
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
                   control={form.control}
                   name="email"

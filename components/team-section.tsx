@@ -27,10 +27,10 @@ export function TeamSection() {
   ]
 
   return (
-    <section id="equipe" className="py-16 md:py-24">
-      <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Nossa Equipe</h2>
+    <section id="equipe" className="py-16 md:py-24 bg-background">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight mb-6">Nossa Equipe</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Conheça os profissionais dedicados a resolver suas questões jurídicas com excelência e compromisso
           </p>
@@ -48,11 +48,11 @@ export function TeamSection() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <CardContent className="pt-6">
-                <h3 className="text-xl font-bold">{member.name}</h3>
+              <CardContent className="pt-6 px-6">
+                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
                 <p className="text-sm text-primary font-medium">{member.role}</p>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="px-6 pb-6 pt-2">
                 <p className="text-sm text-muted-foreground">{member.description}</p>
               </CardFooter>
             </Card>
